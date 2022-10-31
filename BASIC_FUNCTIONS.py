@@ -18,7 +18,7 @@ CANVAS = ['canvas','cnvas','canvs']
 BANNER_MEDIA = ['bannar media','banner media','bannermedia']
 TRANSLIT = ["translit","tranlit",'translitt']
 
-MATT = ['matt','mett','met','mat']
+MATT = ['matt','matte','mett','met','mat']
 GLOSS = ['glossy','gloss','glos']
 
 
