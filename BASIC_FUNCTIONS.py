@@ -106,7 +106,7 @@ def detectQuantity(file_name):
             if(height == str(Quantity)):
                 return 1
         except:
-            pass
+            print("here")
         return Quantity
     except:
         return 1
