@@ -94,9 +94,9 @@ def detectQuantity(file_name):
     QuantityRegex='.*?([0-9]+)$'
     #matches digit at end of str
     #we have to remove extension first
-    file_name = file_name.rsplit('.',1)[0]
+    file_namesplit = file_name.rsplit('.',1)[0]
     try:
-        Quantity = re.search(QuantityRegex, file_name).group(1)
+        Quantity = re.search(QuantityRegex, file_namesplit).group(1)
         ##WE USE THIS TO CHECK IF IT IS GIVING SAME QUANTITY AS IN HEIGTH OF SIZE
         ##IF SAME THEN WE USE QUANTITY = 1
         try:
