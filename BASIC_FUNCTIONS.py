@@ -12,7 +12,7 @@ MediaCategory = ["Gloss Vinyl","Matte Vinyl","BL Vinyl","OneWay Vision","Gloss C
 EXPECT_TEXT, EXPECT_MEDIA_SELECT, EXPECT_FILE = range(3)
 #ALIAS FOR MEDIAS
 VINYL = ['vinyl','vinyle','binyl','vnyl','vinayal','vinl']
-BL = ['bl flex','backlit','baklit','backlitt']
+BL = ['bl','backlit','baklit','backlitt']
 ONEWAY_VISION = ['onewayvision','oneway','onway','1way']
 CANVAS = ['canvas','cnvas','canvs']
 BANNER_MEDIA = ['bannar media','banner media','bannermedia']
