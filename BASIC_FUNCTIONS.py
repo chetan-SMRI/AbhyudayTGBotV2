@@ -101,6 +101,8 @@ def detectQuantity(file_name):
         ##IF SAME THEN WE USE QUANTITY = 1
         try:
             height = detectWidthHeight(file_name).split('x')[1]
+            print(Quantity)
+            print(height)
             if(height == str(Quantity)):
                 return 1
         except:
