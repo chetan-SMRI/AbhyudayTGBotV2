@@ -285,6 +285,9 @@ def EditOrder(update: Update, context: CallbackContext):
     Order = GetOrderDetails(str(update.callback_query.message.message_id))
     ##REMOVING EDIT BUTTON IF CLICKED AFTER 10 MINUTES
 
+#########################################################
+#ONLY FOR ADMIN FOR CHANGING JOB STATUS
+#########################################################
     if(str(update.effective_chat.id) == PrintAdmin[0]):
         if 'WIP#' in query.data:
             OrderID = query.data.replace('WIP#','')
@@ -294,6 +297,7 @@ def EditOrder(update: Update, context: CallbackContext):
                 message_id=update.callback_query.message.message_id, 
                 caption=
                 f'`#Order No. : {str(OrderDetails[10])}`\n'
+                f'Client : ***{returnClientAlias(str(OrderDetails[0]))}***\n'
                 f'Media : ***{str(OrderDetails[1])}***\n'
                 f'Size(inches) : ***{str(OrderDetails[4])+"x"+str(OrderDetails[5])}***'                        
                 f'\nQuantity : ***{str(OrderDetails[6])}***'
@@ -312,6 +316,7 @@ def EditOrder(update: Update, context: CallbackContext):
                 message_id=update.callback_query.message.message_id, 
                 caption=
                 f'`#Order No. : {str(OrderDetails[10])}`\n'
+                f'Client : ***{returnClientAlias(str(OrderDetails[0]))}***\n'
                 f'Media : ***{str(OrderDetails[1])}***\n'
                 f'Size(inches) : ***{str(OrderDetails[4])+"x"+str(OrderDetails[5])}***'                        
                 f'\nQuantity : ***{str(OrderDetails[6])}***'
