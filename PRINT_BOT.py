@@ -230,6 +230,7 @@ def TextHandler(update: Update, context: CallbackContext):
     
 def cancel(update: Update, context: CallbackContext):
     update.message.reply_text("Cancelled.\nNote-Processed Orders Aren't Cancelled.")
+    return ConversationHandler.END
 
 
 #  ____                                                ___               _               
