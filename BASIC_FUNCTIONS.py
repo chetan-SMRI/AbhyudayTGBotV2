@@ -73,7 +73,7 @@ def detectWidthHeight(file_name):
     #matches digit at end of str
     #we have to remove extension first
     file_name = file_name.rsplit('.',1)[0]
-
+    file_name = file_name.replace(' ','')
     try:
         WH = []
         if 'x' in file_name:
