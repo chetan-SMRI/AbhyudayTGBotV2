@@ -11,7 +11,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 MediaCategory = ["Gloss Vinyl","Matte Vinyl","BL Vinyl","OneWay Vision","Gloss Canvas","Matt Canvas","Banner Media","Translit","Other"]
 EXPECT_TEXT, EXPECT_MEDIA_SELECT, EXPECT_FILE = range(3)
 #ALIAS FOR MEDIAS
-VINYL = ['vinyl','binyl','vnyl','vinayal','vinl']
+VINYL = ['vinyl','vinyle','binyl','vnyl','vinayal','vinl']
 BL = ['bl flex','backlit','baklit','backlitt']
 ONEWAY_VISION = ['onewayvision','oneway','onway','1way']
 CANVAS = ['canvas','cnvas','canvs']
@@ -100,9 +100,7 @@ def detectQuantity(file_name):
         ##WE USE THIS TO CHECK IF IT IS GIVING SAME QUANTITY AS IN HEIGTH OF SIZE
         ##IF SAME THEN WE USE QUANTITY = 1
         try:
-            height = detectWidthHeight(file_name).split('x')[1]
-            print(Quantity)
-            print(height)
+            height = re.search(QuantityRegex, detectWidthHeight(file_name).split('x')[1]).group(1)
             if(height == str(Quantity)):
                 return 1
         except:
